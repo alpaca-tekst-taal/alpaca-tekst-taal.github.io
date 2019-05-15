@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Alpaca Tekst & Taal</title>
+<script src="script/formulier.js"></script>
+</head>
+<body>
+
+
+<form onChange="prijsUpdate();">
+	<table>
+	<tr><td>Naam:</td><td><input type="text" name="naam"></td></tr>
+	<tr><td>Uw e-mailadres:</td><td><input type="email" name="email" id="email" required></td></tr>
+	<tr><td>Uw bestand:</td><td><input type="file" name="bestand" id="bestand" required></td></tr>
+	<tr><td>Brontaal:</td>
+	<td><select name="brontaal">
+		<option value="da">Deens</option>
+		<option value="de">Duits</option>
+		<option value="en" selected>Engels</option>
+		<option value="eo">Esperanto</option>
+		<option value="fr">Frans</option>
+		<option value="it">Italiaans</option>
+		<option value="nl">Nederlands</option>
+		<option value="pl">Pools</option>
+		<option value="es">Spaans</option>
+		<option value="sv">Zweeds</option>
+	</select></td></tr>
+	<tr><td>Doeltaal:</td>
+	<td><select name="doeltaal">
+		<option value="en">Engels</option>
+		<option value="eo">Esperanto</option>
+		<option value="nl" selected>Nederlands</option>
+	</select></td></tr>
+	<tr id="ikweet" id="paginainput" style="display:none"><td>Ik weet het aantal</td><td><input type="radio" name="telling" id="telWoorden" checked onChange="inWoorden()">woorden<input type="radio" name="telling" id="telPaginas" onChange="inPaginas()">pagina's.</td></tr>
+	<tr id="woordinput"><td>Aantal woorden:</td><td><input type="number" name="woorden" id="woorden" min="1" required></td></tr>
+	<tr id="paginainput"><td>Aantal pagina's:</td><td><input type="number" name="paginas" id="paginas" value="1" min="1" required></td></tr>
+	<tr id="scaninput"><td colspan="2">Het bestand is niet in tekstvorm (bijvoorbeeld een scan).<input type="checkbox" name="scan" id="scan" value="ja"></td></tr>
+	<tr><td colspan="2">De opmaak moet exact overeenkomen met het origineel.<input type="checkbox" name="opmaak" id="opmaak" value="ja"></td></tr>
+	<tr><td>Uw deadline (NL-tijd):</td><td><input type="date" name="datum" id="datum"><input type="time" name="tijd" value="00:00"></td></tr>
+	<tr><td colspan="2">Beschrijving of opmerkingen:</td></tr>
+	<tr><td colspan="2"><textarea name="beschrijving" rows="4" cols="40" id="tekstvak"></textarea></td></tr>
+	<tr><td colspan="2"><input type="submit" id="verzenden" value="Aanvraag verzenden"></td></tr>
+	<tr><td>Geschatte prijs:</td><td id="prijs"></td></tr>
+	</table>
+</form>
+
+</body>
+</html>
