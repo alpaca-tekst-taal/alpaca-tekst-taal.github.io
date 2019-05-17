@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Tags - Alpaca Tekst &amp; Taal</title>
+  <title>Tags - Alpako Tekst &amp; Taal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://alpako.nl/favicon.png">
@@ -41,10 +41,10 @@
     <div class='header'>
   <div class="container">
     <div class="logo">
-      <a href="https://alpako.nl/"><img alt="Alpaca Tekst &amp; Taal" src="https://alpako.nl/images/logo.svg" /></a>
+      <a href="https://alpako.nl/"><img alt="Alpako Tekst &amp; Taal" src="https://alpako.nl/images/logo.svg" /></a>
     </div>
     <div class="logo-mobile">
-      <a href="https://alpako.nl/"><img alt="Alpaca Tekst &amp; Taal" src="https://alpako.nl/images/logo-mobile.svg" /></a>
+      <a href="https://alpako.nl/"><img alt="Alpako Tekst &amp; Taal" src="https://alpako.nl/images/logo-mobile.svg" /></a>
     </div>
     <div id="main-menu" class="main-menu">
   <ul>
@@ -86,14 +86,38 @@
 <form onChange="prijsUpdate();">
 	<table>
 
+ 	<tr><td>Brontaal:</td>
+	<td><select name="brontaal" id="brontaal">
+		<option value="Deens">Deens</option>
+		<option value="Duits">Duits</option>
+		<option value="Engels" selected>Engels</option>
+		<option value="Esperanto">Esperanto</option>
+		<option value="Frans">Frans</option>
+		<option value="Italiaans">Italiaans</option>
+		<option value="Nederlands">Nederlands</option>
+		<option value="Pools">Pools</option>
+		<option value="Spaans">Spaans</option>
+		<option value="Zweeds">Zweeds</option>
+	</select></td></tr>
+	<tr><td>Doeltaal:</td>
+	<td><select name="doeltaal" id="doeltaal">
+		<option value="Engels">Engels</option>
+		<option value="Esperanto">Esperanto</option>
+		<option value="Nederlands" selected>Nederlands</option>
+	</select></td></tr> 
+	<tr id="ikweet" id="paginainput" style="display:none"><td width="140">Ik weet het aantal</td><td colspan="2"><input type="radio" name="telling" id="telWoorden" checked onChange="inWoorden()">woorden<input type="radio" name="telling" id="telPaginas" onChange="inPaginas()">pagina's.</td></tr>
+	<tr id="woordinput"><td>Aantal woorden:</td><td colspan="2"><input type="number" name="woorden" id="woorden" min="1" required></td></tr>
+	<tr id="paginainput"><td>Aantal pagina's:</td><td colspan="2"><input type="number" name="paginas" id="paginas" value="1" min="1" required></td></tr>
+	<tr id="scaninput"><td colspan="2">Het bestand is niet in tekstvorm (bijvoorbeeld een scan).</td><td><input type="checkbox" name="scan" id="scan" value="ja"></td></tr>
+	<tr><td colspan="2">De opmaak moet exact overeenkomen met het origineel.</td><td><input type="checkbox" name="opmaak" id="opmaak" value="ja"></td></tr>
 
-	<tr id="ikweet" id="paginainput" style="display:none"><td>Ik weet het aantal</td><td><input type="radio" name="telling" id="telWoorden" checked onChange="inWoorden()">woorden<input type="radio" name="telling" id="telPaginas" onChange="inPaginas()">pagina's.</td></tr>
-	<tr id="woordinput"><td>Aantal woorden:</td><td><input type="number" name="woorden" id="woorden" min="1" required></td></tr>
-	<tr id="paginainput"><td>Aantal pagina's:</td><td><input type="number" name="paginas" id="paginas" value="1" min="1" required></td></tr>
-	<tr id="scaninput"><td colspan="2">Het bestand is niet in tekstvorm (bijvoorbeeld een scan).<input type="checkbox" name="scan" id="scan" value="ja"></td></tr>
-	<tr><td colspan="2">De opmaak moet exact overeenkomen met het origineel.<input type="checkbox" name="opmaak" id="opmaak" value="ja"></td></tr>
-
-	<tr><td>Geschatte prijs:</td><td id="prijs"></td></tr>
+	<tr><td>BTW:</td>
+	<td><select name="btw" id="btw">
+		<option value="nul">0% of naar mij verlegd</option>
+		<option value="21" selected>21%</option>
+	</select></td></tr> 
+	<tr><td>Geschatte prijs:</td><td id="prijs" colspan="2"></td></tr>
+	<tr><td colspan="3"><a onClick="emailen()" href="mailto:formulier@alpako.nl?subject=Vertaling%20alpako.nl&body=" id="verzenden"><input type="button" value="Stuur een e-mail!"></a></td></tr>
 	</table>
 </form>
 </div>
@@ -118,11 +142,11 @@
     <div class="row">
       <div class="col-12">
         <div class="footer-inner">
-          <h3 class="footer-title">Alpaca Tekst &amp; Taal</h3>
+          <h3 class="footer-title">Alpako Tekst &amp; Taal</h3>
           <ul class="footer-menu">
             <li><strong>E-mail: </strong><a href="mailto:alpako@alpako.nl">alpako@alpako.nl</a></li>
             
-            <li class="copyright">© 2019 Alpaca Tekst &amp; Taal</li>
+            <li class="copyright">© 2019 Alpako Tekst &amp; Taal</li>
           </ul>
         </div>
       </div>
