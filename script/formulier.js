@@ -1,5 +1,6 @@
 var ppw = 0.05;
-var ppp = 25;
+var wpp = 500;
+var ppp = ppw * wpp;
 var pps = 15;
 var opm = 1.25;
 var btw = 1.21;
